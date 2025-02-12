@@ -1,0 +1,13 @@
+1)brew install platformsh/tap/platformsh-cli
+
+2)platform #(for login)
+
+3)platform project:create
+during this command you will create org, attach phone(req)
+result
+ Region: eu-5.platform.sh
+  Project ID: 73jtjprrsx7xw
+  Project title: demo
+  URL: https://console.platform.sh/01jkwwjd3ya1rzzc8c48jeqbja/73jtjprrsx7xw
+  Git URL: 73jtjprrsx7xw@git.eu-5.platform.sh:73jtjprrsx7xw.git
+
