@@ -9,15 +9,32 @@ name: app
 # to find the supported versions for the 'nodejs' type.
 type: 'nodejs:22'
 
+#web:
+#  commands:
+#    start: npm start
+#  locations:
+#    '/':
+#      root: 'public'
+#      passthru: true
+#      index: [ "index.html" ]
+#      allow: true
+
 web:
-  commands:
-    start: npm start
   locations:
     '/':
+      # The public directory of the application relative to its root
       root: 'public'
-      passthru: true
-      index: [ "index.html" ]
+      # The files to look for when serving a directory
+      index:
+        - 'index.html'
+      # Disable server-side scripts
+      scripts: false
       allow: true
+      # Set caching policy
+      expires: 24h
+      rules:
+        \.(css|js|gif|jpe?g|png|svg)$:
+          expires: 4w
 # The following block defines a single writable directory, 'web/uploads'
 # The 'source' specifies where the writable mount is. The 'local' source
 # indicates that the mount point will point to a local directory on the
