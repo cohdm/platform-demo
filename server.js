@@ -7,7 +7,6 @@ app.get("/", (req, res) => {
     res.sendFile('index.html', { root: __dirname });
 });
 
-
 app.get("/hello", (req, res) => {
     res.send("Hello, Platform.sh!");
 });
